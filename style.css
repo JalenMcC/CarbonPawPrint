@@ -22,7 +22,7 @@ li {
 
 li a {
     display: block;
-    color: white;
+    color: #ADFCF9;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -36,7 +36,7 @@ li a:hover {
 
 /* Front Page Title */
 h1 {
-    color: blueviolet;
+    color: #ADFCF9;
     text-align: center;
     font: bold 100px helvetica;
     display: block;
@@ -47,25 +47,9 @@ h1 {
 
 /* Background */
 body {
-    /*
-    background-image: url("/Images/TryTwo.jpg");
-    background-position: 0px 200px;
-    background-size: 100%;
-    */
-
-    background-color: #324A5F
+    background-color: #89A894;
 }
 
-img #menuIcon {
-    height: 10%;
-    width: 10%;
-    
-}
-
-img #menuIcon:hover {
-   color: coral;
-    
-}
 
 footer {
     text-align: bottom;
