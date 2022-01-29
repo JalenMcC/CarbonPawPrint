@@ -9,6 +9,7 @@ ul {
 
     /*Fixes to top of page*/
     top: 0;
+    left: 0;
     width: 100%;
     position: fixed;
 
@@ -30,3 +31,12 @@ li a {
 li a:hover {
     background-color: rgb(1, 172, 106);
   }
+
+
+h1 {
+    color: blueviolet;
+    text-align: center;
+    display: block;
+    top: 40px;
+
+}
