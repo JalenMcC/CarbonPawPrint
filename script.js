@@ -1,8 +1,17 @@
 //import Config from "config"
 
 //var mykey ="Bearer " + Config.config.MY_KEY;
+let total_electricity_value = 0;
 
-// POST request using fetch()
+const btn = document.querySelector('#btn');
+        btn.addEventListener('click', (event) => {
+            let checkboxes = document.querySelectorAll('input[name="electricity"]:checked');
+            checkboxes.forEach((checkbox) => {
+                total_electricity_value += parseInt(checkbox.value);
+            });
+            console.log(total_electricity_value);
+
+            // POST request using fetch()
 fetch("https://www.carboninterface.com/api/v1/estimates", {
      
     // Adding method type
@@ -12,7 +21,7 @@ fetch("https://www.carboninterface.com/api/v1/estimates", {
     body: JSON.stringify({
         type: "electricity",
         electricity_unit: "mwh",
-        electricity_value: 0.000225,
+        electricity_value: total_electricity_value,
         country: "us"
     }),
      
@@ -40,4 +49,7 @@ fetch("https://www.carboninterface.com/api/v1/estimates", {
 // Display result
 document.getElementById("estimates").innerHTML = li;
 });
+total_electricity_value = 0;
+}); 
+
 
