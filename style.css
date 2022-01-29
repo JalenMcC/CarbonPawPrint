@@ -29,14 +29,33 @@ li a {
   }
 
 li a:hover {
-    background-color: rgb(1, 172, 106);
+    background-color: rgb(135, 138, 136);
   }
 
 
 h1 {
     color: blueviolet;
     text-align: center;
+    font: bold 100px helvetica;
     display: block;
     top: 40px;
+    margin-top: 200px;
 
+}
+
+body {
+    background-image: url("/Images/TryTwo.jpg");
+    background-position: 0px 200px;
+    background-size: 100%;
+}
+
+img #menuIcon {
+    height: 10%;
+    width: 10%;
+    
+}
+
+img #menuIcon:hover {
+   color: coral;
+    
 }
