@@ -18,7 +18,7 @@ fetch("https://www.carboninterface.com/api/v1/estimates", {
      
     // Adding headers to the request
     headers: {
-        "Authorization": "Bearer API_KEY_HERE",
+        "Authorization": "Bearer w1HQe0eFj5V3cRgMhGELQ",
         "Content-Type": "application/json"
     }
 })
