@@ -1,0 +1,32 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+    
+    overflow: hidden;
+    background-color: #a03535;
+
+    /*Fixes to top of page*/
+    top: 0;
+    width: 100%;
+    position: fixed;
+
+}
+
+li {
+    float: right;
+  }
+
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+li a:hover {
+    background-color: rgb(1, 172, 106);
+  }
