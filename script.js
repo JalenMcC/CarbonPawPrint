@@ -27,4 +27,17 @@ fetch("https://www.carboninterface.com/api/v1/estimates", {
 .then(response => response.json())
  
 // Displaying results to console
-.then(json => console.log(json));
+.then(json => {
+    //log json file
+    console.log(json)
+    // Create a variable to store HTML
+    let li = `<tr><th>Carbon Footprint</th></tr>`;
+    li += `<tr><td>${json.data.attributes.carbon_g} </td></tr>`;
+       
+    
+    
+
+// Display result
+document.getElementById("estimates").innerHTML = li;
+});
+
