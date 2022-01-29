@@ -1,5 +1,7 @@
-//  main.js
-  
+//import Config from "config"
+
+//var mykey ="Bearer " + Config.config.MY_KEY;
+
 // POST request using fetch()
 fetch("https://www.carboninterface.com/api/v1/estimates", {
      
@@ -16,6 +18,7 @@ fetch("https://www.carboninterface.com/api/v1/estimates", {
      
     // Adding headers to the request
     headers: {
+        "Authorization": "Bearer API_KEY_HERE",
         "Content-Type": "application/json"
     }
 })
