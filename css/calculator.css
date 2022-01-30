@@ -85,3 +85,13 @@ h2.map-header {
   padding-top: 10px;
   color: #32d1b1;
 }
+
+select {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+form {
+  text-align: center;
+}
