@@ -1,8 +1,12 @@
 //import Config from "config"
 
+//Map data represents points of interest
+const mapData = [{"name":"Clemson Area Food Exchange","lat":34.695182108663616,"long":-82.7747172926098},{"name":"Lowe's","lat":34.69069780170335, "long":-82.78731025089711}];
 let houseElectricity = {refridgerator:"refridgerator suggestion\n", microwave:"microwave suggestion\n", oven:"oven suggestion\n", dishwasher:"dishwasher suggestion\n", water_heater:"water heater suggestion\n", air_conditioner:"air conditioner suggestion\n", heater:"heater suggestion\n", lights:"lights suggestion\n"};
 let suggestions;
 
+const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let labelIndex = 0;
 let map;
 
 //Function to initialze map
@@ -37,7 +41,14 @@ const btn = document.querySelector('#btn');
 
             // POST request using fetch()
 
-fetch("https://github.com/JalenMcC/CarbonPawPrint/mapData.json")
+for (let i = 0; i < mapData.length; ++i) {
+    new google.maps.Marker({
+        position: {lat: mapData[i].lat, lng:mapData[i].long},
+        map,
+        label: labels[labelIndex++ % labels.length],
+        title: mapData[i].name,
+    });
+}
 
 fetch("https://www.carboninterface.com/api/v1/estimates", {
      
