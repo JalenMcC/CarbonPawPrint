@@ -1,71 +1,79 @@
 #resourceHeader {
-    color: #ADFCF9;
-    text-align: center;
-    font: bold 100px helvetica;
-    display: block;
-    top: 20px;
-    margin-top: 100px;
+  color: #ADFCF9;
+  text-align: center;
+  font: bold 100px helvetica;
+  display: block;
+  top: 20px;
+  margin-top: 100px;
+  padding-bottom: 10px;
+}
+
+hr.dashed {
+  border-top: 3px dashed #bbb;
 }
 
 #about-resource {
   text-align: center;
-  color:#87ece9;
+  color: #096e59;
 }
 
 /* Background */
 body {
-    background-color: #89A894;
+  background-color: #89A894;
 }
 
 /* Front Page Title */
 h1 {
-    color: #ADFCF9;
-    text-align: center;
-    font: bold 100px helvetica;
-    display: block;
-    top: 40px;
-    margin-top: 200px;
-
+  color: #ADFCF9;
+  text-align: center;
+  font: bold 100px helvetica;
+  display: block;
+  top: 40px;
+  margin-top: 200px;
 }
 
 li a.nav-link {
-    display: block;
-    color: #ADFCF9;
-    text-align: right;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
+  display: block;
+  color: #ADFCF9;
+  text-align: right;
+  padding: 14px 16px;
+  text-decoration: none;
+}
 
 /* Navigation Hover */
 li a.nav-link:hover {
-    background-color: #ccc9dc; 
-    font-weight: bold;
-  }
+  background-color: #ccc9dc; 
+  font-weight: bold;
+}
 
 ul.navbar-nav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 
-    /*Fixes to top of page*/
-    top: 0;
-    left:0;
-    width: 100%;
-    position: fixed;
+  /*Fixes to top of page*/
+  top: 0;
+  left:0;
+  width: 100%;
+  position: fixed;
 
 }
 
 ul.resources {
-    list-style-type: square;
-    list-style-position: inside;
-    text-align: center;
+  list-style-type: square;
+  list-style-position: inside;
+  text-align: center;
 }
 
 li a.resource-link {
-    font-size: x-large;
-    color: #53d172; 
-    text-decoration: none;
+  font-size: x-large;
+  color: #70e08c; 
+  text-decoration: none;
+}
+
+li.resource-spacer {
+  padding-top: 10px;
 }
 
 /* Works only when the window size is less than med */

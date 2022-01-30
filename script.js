@@ -1,7 +1,7 @@
 //import Config from "config"
 
-//Map data represents points of interest
-const mapData = [{"name":"Clemson Area Food Exchange","lat":34.695182108663616,"long":-82.7747172926098},{"name":"Lowe's","lat":34.69069780170335, "long":-82.78731025089711}];
+//Map data represents points of interest --format: name:string,lat:double,long:double
+const mapData = [{"name":"Clemson Area Food Exchange - Provides high quality local foods right to your doorstep","lat":34.695182108663616,"long":-82.7747172926098},{"name":"Lowe's - Buying LEDs over incandescent lightbulbs can greatly reduce energy consumption","lat":34.69069780170335, "long":-82.78731025089711},{"name":"Bike Rental Station - Renting or using a bike can greatly decrease emissions from gas powered vehicles.","lat":34.67916480973539,"long":-82.8348125604455}];
 let houseElectricity = {refridgerator:"refridgerator suggestion\n", microwave:"microwave suggestion\n", oven:"oven suggestion\n", dishwasher:"dishwasher suggestion\n", water_heater:"water heater suggestion\n", air_conditioner:"air conditioner suggestion\n", heater:"heater suggestion\n", lights:"lights suggestion\n"};
 let suggestions;
 
