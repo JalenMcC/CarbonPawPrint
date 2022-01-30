@@ -23,6 +23,7 @@ function calc_estimate(id, miles) {
         out += `<div>${
             json.data.attributes.carbon_g
         } g </div></div>`;
+        document.getElementById("output").style.textAlign = "center";
         document.getElementById("output").innerHTML = out;
     });
 }
