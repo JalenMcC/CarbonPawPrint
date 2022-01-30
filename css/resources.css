@@ -3,8 +3,13 @@
     text-align: center;
     font: bold 100px helvetica;
     display: block;
-    top: 40px;
-    margin-top: 200px;
+    top: 20px;
+    margin-top: 100px;
+}
+
+#about-resource {
+  text-align: center;
+  color:#87ece9;
 }
 
 /* Background */
@@ -53,11 +58,14 @@ ul.navbar-nav {
 
 ul.resources {
     list-style-type: square;
+    list-style-position: inside;
+    text-align: center;
 }
 
 li a.resource-link {
-    text-align: center;
-    color: #ADFCF9; 
+    font-size: x-large;
+    color: #53d172; 
+    text-decoration: none;
 }
 
 /* Works only when the window size is less than med */
