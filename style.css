@@ -2,28 +2,40 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    
-    
     overflow: hidden;
-    background-color: #341c1c;
 
     /*Fixes to top of page*/
     top: 0;
-    left: 0;
+    left:0;
     width: 100%;
     position: fixed;
 
 }
 
-li {
-    float: right;
+/* Works only when the window size is less than med */
+@media screen and (max-width: 991px) {
+  ul {
+    width: 50%;
   }
+
+  /*
+  .toggleMobileMenu {
+
+  }
+  */
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+}
+
 
 
 li a {
     display: block;
     color: #ADFCF9;
-    text-align: center;
+    text-align: right;
     padding: 14px 16px;
     text-decoration: none;
   }
@@ -50,7 +62,11 @@ body {
     background-color: #89A894;
 }
 
-
-footer {
-    text-align: bottom;
+#resourceHeader {
+    color: #ADFCF9;
+    text-align: center;
+    font: bold 100px helvetica;
+    display: block;
+    top: 40px;
+    margin-top: 200px;
 }

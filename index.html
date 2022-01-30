@@ -1,8 +1,9 @@
-<!DOCTYPE html>		<!-- proper HTML5 doctype -->
+<!DOCTYPE html>		
 <html>
 	<head>
 		<meta charset="utf-8">
 		<title>CarbonPawPrints</title>
+		<link rel="icon" href="Images/pawLogo.png"
 		
 		<meta name="description" content="Whatever you want">
   		<meta name="keywords" content="HTML, CSS, JavaScript, Bootstrap">
@@ -18,10 +19,9 @@
 
 	<body>
 
-
+        <!-- Navigation Bar -->
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light">
-                <a href="#" class="navbar-brand">Test</a>
                 <button
                     class="navbar-toggler"
                     type="button"
@@ -31,17 +31,27 @@
                     aria-expanded="false"
                     aria-table="toggle navigation"
                 >
-                <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="toggleMobileMenu">
                     <ul class="navbar-nav">
                         <li>
-                            <a class="nav-link" href="#">A</a>
-                        </li><li>
-                            <a class="nav-link" href="#">B</a>
+                            <a class="nav-link" href="index.html">About</a>
                         </li>
                         <li>
-                            <a class="nav-link" href="#">C</a>
+                            <a class="nav-link" href="#">Daily</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">Monthly</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">Yearly</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="resources.html">Resources</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">Location</a>
                         </li>
                     </ul>
                 </div>
@@ -50,34 +60,79 @@
 
 
         <div>
+
+            <!-- Title -->
             <h1>Carbon Paw Prints</h1>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-            </svg>
+
+
+            <!-- Checkboxes -->
             <div>
                 <label for="refridgerator">
-                    <input type="checkbox" id="refridgerator" name="electricity" value=1>  refridgerator
+                    <input type="checkbox" id="refridgerator" name="electricity" value=0.001>  refridgerator
                  </label>
             </div>
             <div>
                  <label for="microwave">
-                    <input type="checkbox" id="microwave" name="electricity" value=2>  microwave
+                    <input type="checkbox" id="microwave" name="electricity" value=0.0003>  microwave
                  </label>
             </div>
+            <div>
+                <label for="oven">
+                   <input type="checkbox" id="oven" name="electricity" value=0.0003>  oven
+                </label>
+           </div>
+           <div>
+            <label for="dishwasher">
+               <input type="checkbox" id="dishwasher" name="electricity" value=0.00045>  dishwasher
+            </label>
+           </div>
+           <div>
+            <label for="water_heater">
+               <input type="checkbox" id="water_heater" name="electricity" value=0.004>  water heater
+            </label>
+            </div>
+            <div>
+                <label for="air_conditioner">
+                   <input type="checkbox" id="air_conditioner" name="electricity" value=0.035>  air_conditioner
+                </label>
+           </div>
+           <div>
+            <label for="heater">
+               <input type="checkbox" id="heater" name="electricity" value=0.0015>  heater
+            </label>
+       </div>
+       <div>
+        <label for="lights">
+           <input type="checkbox" id="lights" name="electricity" value=0.018>  lights
+        </label>
+   </div>
+       </div>
+            <!-- Submit button for checkboxes -->
             <div><p>
                 <button id="btn">Submit</button>
             </p></div>
             <table id="estimates"></table>
         </div>
 
+        <div id="map"></div>
 
-        <footer class="bg-dark text-white pt-5 pb4">
+        <footer class="bg-dark text-white pt-5 pb-5">
+            
             <div class="container text-center text-md-left">
-                <p>CUHackit 2022 Incorperated</p>
+               
+                <div class="row text-center text-md-left">
+
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3" >
+                        <p>CUHackit 2022 Incorporated</p>
+                    </div>
+
+                </div>
+                
             </div>
             
         </footer>
-
+        
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqsSnCMIKQvdiHKEQ9PNuA3LfGGbPn9xs&callback=initMap"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 		<script src="script.js"></script>
 	</body>

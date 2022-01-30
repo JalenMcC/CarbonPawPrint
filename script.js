@@ -1,5 +1,15 @@
 //import Config from "config"
 
+let map;
+
+function initMap() {
+    map = new google.maps.Map(document.getElementById("map"), {
+
+    center: {lat: 34.683, lng: -82.837},
+    zoom: 15,
+    });
+}
+
 //var mykey ="Bearer " + Config.config.MY_KEY;
 let total_electricity_value = 0.00000000000000000000000001;
 
@@ -7,7 +17,7 @@ const btn = document.querySelector('#btn');
         btn.addEventListener('click', (event) => {
             let checkboxes = document.querySelectorAll('input[name="electricity"]:checked');
             checkboxes.forEach((checkbox) => {
-                total_electricity_value += parseInt(checkbox.value);
+                total_electricity_value += parseFloat(checkbox.value);
             });
             console.log(total_electricity_value);
 
