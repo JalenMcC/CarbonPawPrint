@@ -1,15 +1,14 @@
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 
-    /*Fixes to top of page*/
-    top: 0;
-    left:0;
-    width: 100%;
-    position: fixed;
-
+  /*Fixes to top of page*/
+  top: 0;
+  left:0;
+  width: 100%;
+  position: fixed;
 }
 
 /* Works only when the window size is less than med */
@@ -31,27 +30,27 @@ ul {
 }
 
 li a {
-    display: block;
-    color: #ADFCF9;
-    text-align: right;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
+  display: block;
+  color: #ADFCF9;
+  text-align: right;
+  padding: 14px 16px;
+  text-decoration: none;
+}
 
 /* Navigation Hover */
 li a:hover {
-    background-color: #ccc9dc; 
-    font-weight: bold;
-  }
+  background-color: #ccc9dc; 
+  font-weight: bold;
+}
 
 /* Front Page Title */
 h1 {
-    color: #ADFCF9;
-    text-align: center;
-    font: bold 100px helvetica;
-    display: block;
-    top: 40px;
-    margin-top: 100px;
+  color: #ADFCF9;
+  text-align: center;
+  font: bold 100px helvetica;
+  display: block;
+  top: 40px;
+  margin-top: 100px;
 }
 
 h2 {
@@ -73,6 +72,7 @@ button {
 .wrapper {
   display: grid;
   text-align: center;
+  font-size: large;
 }
 /* Background */
 body {
@@ -81,9 +81,5 @@ body {
 
 h2.map-header {
   padding-bottom: 20px;
-}
-
-input {
   padding-top: 10px;
-  padding-bottom: 10px;
 }
