@@ -1,0 +1,56 @@
+/* Background */
+body {
+    background-color: #89A894;
+}
+
+/* Front Page Title */
+h1 {
+    color: #ADFCF9;
+    text-align: center;
+    font: bold 100px helvetica;
+    display: block;
+    top: 40px;
+    margin-top: 200px;
+
+}
+
+li a.nav-link {
+    display: block;
+    color: #ADFCF9;
+    text-align: right;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+/* Navigation Hover */
+li a.nav-link:hover {
+    background-color: #ccc9dc; 
+    font-weight: bold;
+  }
+
+ul.navbar-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    /*Fixes to top of page*/
+    top: 0;
+    left:0;
+    width: 100%;
+    position: fixed;
+
+}
+
+/* Works only when the window size is less than med */
+@media screen and (max-width: 991px) {
+  ul {
+    width: 50%;
+  }
+
+  /*
+  .toggleMobileMenu {
+
+  }
+  */
+}

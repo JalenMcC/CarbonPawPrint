@@ -61,12 +61,3 @@ h1 {
 body {
     background-color: #89A894;
 }
-
-#resourceHeader {
-    color: #ADFCF9;
-    text-align: center;
-    font: bold 100px helvetica;
-    display: block;
-    top: 40px;
-    margin-top: 200px;
-}
