@@ -7,7 +7,7 @@ const btn = document.querySelector('#btn');
         btn.addEventListener('click', (event) => {
             let checkboxes = document.querySelectorAll('input[name="electricity"]:checked');
             checkboxes.forEach((checkbox) => {
-                total_electricity_value += parseInt(checkbox.value);
+                total_electricity_value += parseFloat(checkbox.value);
             });
             console.log(total_electricity_value);
 
