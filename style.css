@@ -50,13 +50,13 @@ body {
 }
 
 li.resource {
-    list-style-type: square;
+    list-style-type: none;
     text-align: center;
-    font-size: medium;
+    font-size: small;
 }
 
 a.resources-link {
-    font-size:large
+    font-size:medium;
 }
 
 #resourceHeader {
