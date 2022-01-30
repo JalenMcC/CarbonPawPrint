@@ -50,8 +50,8 @@ fetch("https://www.carboninterface.com/api/v1/estimates", {
     //log json file
     console.log(json)
     // Create a variable to store HTML
-    let li = `<tr><th>Carbon Footprint</th></tr>`;
-    li += `<tr><td>${json.data.attributes.carbon_g} g </td></tr>`;
+    let li = `<div><div style=\"font-weight:bold;\">Carbon Footprint</div>`;
+    li += `<div>${json.data.attributes.carbon_g} g </div></div>`;
        
     
     
@@ -61,5 +61,7 @@ document.getElementById("estimates").innerHTML = li;
 });
 total_electricity_value = 0.00000000000000000000000001;
 }); 
+
+document.getElementById("estimates").innerHTML = '<div><div style=\"font-weight:bold;\">Carbon Footprint</div><div>0 g</div></div>';
 
 

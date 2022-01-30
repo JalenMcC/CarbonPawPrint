@@ -36,7 +36,7 @@
                 <div class="collapse navbar-collapse" id="toggleMobileMenu">
                     <ul class="navbar-nav">
                         <li>
-                            <a class="nav-link" href="about.html">About</a>
+                            <a class="nav-link" href="index.html">About</a>
                         </li>
                         <li>
                             <a class="nav-link" href="calculator.html">Calculator</a>
@@ -54,9 +54,11 @@
 
             <!-- Title -->
             <h1>Carbon Paw Prints</h1>
-
+            <h2>Carbon Footprint Calculator</h2>
+            <h3>Pick all of the following devices that you use frequently</div>h3>
 
             <!-- Checkboxes -->
+            <div class="wrapper">
             <div>
                 <label for="refridgerator">
                     <input type="checkbox" id="refridgerator" name="electricity" value=0.001>  refridgerator
@@ -84,7 +86,7 @@
             </div>
             <div>
                 <label for="air_conditioner">
-                   <input type="checkbox" id="air_conditioner" name="electricity" value=0.035>  air_conditioner
+                   <input type="checkbox" id="air_conditioner" name="electricity" value=0.035>  air conditioner
                 </label>
            </div>
            <div>
@@ -97,10 +99,9 @@
            <input type="checkbox" id="lights" name="electricity" value=0.018>  lights
         </label>
    </div>
-       </div>
             <!-- Submit button for checkboxes -->
             <div><p>
-                <button id="btn">Submit</button>
+                <button id="btn">Calculate</button>
             </p></div>
             <table id="estimates"></table>
         </div>

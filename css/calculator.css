@@ -57,6 +57,26 @@ h1 {
 
 }
 
+h2 {
+  color: #096e59;
+  text-align: center;
+}
+
+h3 {
+  font: bold 15px helvetica;
+  text-align:center;
+}
+
+button {
+  font: bold 15px helvetica;
+  background-color:#ADFCF9;
+  border-radius: 25px 25px 25px 25px
+}
+
+.wrapper {
+  display: grid;
+  text-align: center;
+}
 /* Background */
 body {
     background-color: #89A894;
