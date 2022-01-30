@@ -1,7 +1,7 @@
 //import Config from "config"
 
 let houseElectricity = {refridgerator:"refridgerator suggestion\n", microwave:"microwave suggestion\n", oven:"oven suggestion\n", dishwasher:"dishwasher suggestion\n", water_heater:"water heater suggestion\n", air_conditioner:"air conditioner suggestion\n", heater:"heater suggestion\n", lights:"lights suggestion\n"};
-let suggestions = '<div style=\"font-weight:bold; background-color:#cdcfc4\">';
+let suggestions;
 
 let map;
 
@@ -18,6 +18,7 @@ let total_electricity_value = 0.00000000000000000000000001;
 
 const btn = document.querySelector('#btn');
         btn.addEventListener('click', (event) => {
+            suggestions = '<div style=\" background-color:#cdcfc4\"><div style=\"font-weight:bold;\">Suggestions</div>';
             let checkboxes = document.querySelectorAll('input[name="electricity"]:checked');
             checkboxes.forEach((checkbox) => {
                 total_electricity_value += parseFloat(checkbox.value);
@@ -68,6 +69,7 @@ fetch("https://www.carboninterface.com/api/v1/estimates", {
 document.getElementById("estimates").innerHTML = li;
 });
 total_electricity_value = 0.00000000000000000000000001;
+
 }); 
 
 document.getElementById("estimates").innerHTML = '<div><div style=\"font-weight:bold;\">Carbon Footprint</div><div>0 g</div></div>';
