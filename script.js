@@ -1,5 +1,8 @@
 //import Config from "config"
 
+let houseElectricity = {refridgerator:"refridgerator suggestion\n", microwave:"microwave suggestion\n", oven:"oven suggestion\n", dishwasher:"dishwasher suggestion\n", water_heater:"water heater suggestion\n", air_conditioner:"air conditioner suggestion\n", heater:"heater suggestion\n", lights:"lights suggestion\n"};
+let suggestions;
+
 let map;
 
 //Function to initialze map
@@ -12,44 +15,30 @@ function initMap() {
 
 const carbonList = [];
 
-//Function to mark up map
-/*function markMap() {
-    carbonList.sort(function(a,b){return(b.amount-a.amount)});
-
-    for (let i = 0; i < carbonList.length; ++i) {
-        console.log(carbonList[i].emitter + carbonList[i].amount);
-    }
-
-    var markerData = JSON.parse(mapData);
-} */
-
 //var mykey ="Bearer " + Config.config.MY_KEY;
 let total_electricity_value = 0.00000000000000000000000001;
 
 const btn = document.querySelector('#btn');
         btn.addEventListener('click', (event) => {
+            suggestions = '<div style=\" background-color:#cdcfc4\"><div style=\"font-weight:bold;\">Suggestions</div>';
             let checkboxes = document.querySelectorAll('input[name="electricity"]:checked');
             checkboxes.forEach((checkbox) => {
                 total_electricity_value += parseFloat(checkbox.value);
-                console.log(checkbox.value);
+                suggestions += '<div>'
+                suggestions += houseElectricity[checkbox.id];
+                suggestions += '</div>'
+                
+                let carbonElem = {emitter:checkbox.id, amount:checkbox.value};
 
-                //Store each carbon type and amount into array
-                const carbonType = {emitter:checkbox.id, amount:checkbox.value};
-                carbonList.push(carbonType);
+                carbonList.push(carbonElem);
             });
-            console.log("Total:" + total_electricity_value);
-            
-            carbonList.sort(function(a,b){return(b.amount-a.amount)});
-
-            for (let i = 0; i < carbonList.length; ++i) {
-                console.log(carbonList[i].emitter + carbonList[i].amount);
-            }
-
-            fetch("CarbonPawPrint/mapData.json")
-            .then (mapData => mapData.json())
-            
+            suggestions += '</div>'
+            console.log(total_electricity_value);
 
             // POST request using fetch()
+
+fetch("https://github.com/JalenMcC/CarbonPawPrint/mapData.json")
+
 fetch("https://www.carboninterface.com/api/v1/estimates", {
      
     // Adding method type
@@ -65,7 +54,7 @@ fetch("https://www.carboninterface.com/api/v1/estimates", {
      
     // Adding headers to the request
     headers: {
-        "Authorization": "Bearer w1HQe0eFj5V3cRgMhGELQ",
+        "Authorization": "Bearer vcf8KGKQcvicbMTgMmAsA",
         "Content-Type": "application/json"
     }
 })
@@ -80,6 +69,7 @@ fetch("https://www.carboninterface.com/api/v1/estimates", {
     // Create a variable to store HTML
     let li = `<div><div style=\"font-weight:bold;\">Carbon Footprint</div>`;
     li += `<div>${json.data.attributes.carbon_g} g </div></div>`;
+    li += suggestions
        
     
     
@@ -88,6 +78,7 @@ fetch("https://www.carboninterface.com/api/v1/estimates", {
 document.getElementById("estimates").innerHTML = li;
 });
 total_electricity_value = 0.00000000000000000000000001;
+
 }); 
 
 document.getElementById("estimates").innerHTML = '<div><div style=\"font-weight:bold;\">Carbon Footprint</div><div>0 g</div></div>';
