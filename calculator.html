@@ -90,6 +90,61 @@
             <table id="estimates"></table>
             </div>
 
+        <!-- Model Dropdown -->
+        <select id="makes" onChange="get_model()">
+            <option>Vehicle Make</option>
+          </select>
+      <!-- Models Dropdown -->
+          <select id="models" onChange="get_year()">
+            <option>Vehicle Model</option>
+          </select>
+      <!-- Years Dropdown -->
+          <select id="years">
+            <option>Vehicle Year</option>
+          </select>
+      <!-- Mileage form and button -->
+        <form onsubmit="return false;">
+          <label for="miles">Miles Driven:</label><br>
+          <input type="text" id="miles" name="miles" value="0"><br>
+          <input type="submit" name="Calculate" onclick="get_estimate()">
+        </form>
+        <div id="output"></div>
+      <script>
+          function get_model() {
+            var all_makes = document.getElementById("makes");
+            var chosen_make = all_makes.options[all_makes.selectedIndex];
+            print_models(chosen_make.value);
+          }
+          </script>
+      <script>
+          function get_year() {
+            var all_models = document.getElementById("models");
+            var chosen_model = all_models.options[all_models.selectedIndex];
+            const year_array = `[${chosen_model.value}]`
+            print_years(year_array)
+          }
+          </script>
+      <script>
+          function get_estimate() {
+              var make1 = document.getElementById("makes");
+              var make2 = make1.options[make1.selectedIndex];
+              var model1 = document.getElementById("models");
+              var model2 = model1.options[model1.selectedIndex];
+              var years1 = document.getElementById("years");
+              var years2 = years1.options[years1.selectedIndex];
+              var miles_driven = document.getElementById('miles').value
+              // Makes sure the information entered is valid, and then calls the calc_estimate() function
+              if(make2 && model2 && years2 && miles_driven > 0){
+                  calc_estimate(years2.value, miles_driven)
+              }
+              // Information entered was not valid
+              else{
+                  alert("Please enter in valid information")
+              }
+          }
+          </script>
+          <script src="vehicle_script.js"></script>
+
         <h2 class="map-header">Below you can find many local resources to help reduce carbon emissions!</h2>
         <div id="map"></div>
 
