@@ -11,7 +11,7 @@ function initMap() {
 }
 
 //var mykey ="Bearer " + Config.config.MY_KEY;
-let total_electricity_value = 0;
+let total_electricity_value = 0.00000000000000000000000001;
 
 const btn = document.querySelector('#btn');
         btn.addEventListener('click', (event) => {
@@ -59,7 +59,7 @@ fetch("https://www.carboninterface.com/api/v1/estimates", {
 // Display result
 document.getElementById("estimates").innerHTML = li;
 });
-total_electricity_value = 0;
+total_electricity_value = 0.00000000000000000000000001;
 }); 
 
 
