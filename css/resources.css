@@ -31,6 +31,7 @@ h1 {
   display: block;
   top: 40px;
   margin-top: 200px;
+  text-shadow: 2px 2px 5px black;
 }
 
 li a.nav-link {
