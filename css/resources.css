@@ -14,12 +14,13 @@ hr.dashed {
 
 #about-resource {
   text-align: center;
-  color: #096e59;
+  color: #32d1b1;
 }
 
 /* Background */
 body {
-  background-color: #89A894;
+  /*background-color: #89A894;*/
+  background-image: linear-gradient(#89A894, #415047);
 }
 
 /* Front Page Title */
