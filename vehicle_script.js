@@ -13,7 +13,7 @@ function calc_estimate(id, miles) {
             {type: "vehicle", distance_unit: "mi", distance_value: parseInt(miles), vehicle_model_id: id}
         ),
         headers: {
-            "Authorization": "Bearer ADD API KEY",
+            "Authorization": "Bearer vcf8KGKQcvicbMTgMmAsA",
             "Content-Type": "application/json"
         }
     }).then(response => response.json())
@@ -50,7 +50,7 @@ function print_models(make_id) {
     fetch(`https://www.carboninterface.com/api/v1/vehicle_makes/${make_id}/vehicle_models`, {
         method: "GET",
         headers: {
-            "Authorization": "Bearer ADD API KEY",
+            "Authorization": "Bearer vcf8KGKQcvicbMTgMmAsA",
             "Content-Type": "application/json"
         }
     }).then(response => response.json()).then(json => {
@@ -95,7 +95,7 @@ function print_models(make_id) {
 fetch("https://www.carboninterface.com/api/v1/vehicle_makes", {
     method: "GET",
     headers: {
-        "Authorization": "Bearer ADD API KEY",
+        "Authorization": "Bearer vcf8KGKQcvicbMTgMmAsA",
         "Content-Type": "application/json"
     }
 }).then(response => response.json()).then(json => {
