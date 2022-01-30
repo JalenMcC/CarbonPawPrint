@@ -1,5 +1,8 @@
 //import Config from "config"
 
+let houseElectricity = {refridgerator:"refridgerator suggestion\n", microwave:"microwave suggestion\n", oven:"oven suggestion\n", dishwasher:"dishwasher suggestion\n", water_heater:"water heater suggestion\n", air_conditioner:"air conditioner suggestion\n", heater:"heater suggestion\n", lights:"lights suggestion\n"};
+let suggestions = '<div style=\"font-weight:bold; background-color:#cdcfc4\">';
+
 let map;
 
 function initMap() {
@@ -18,7 +21,11 @@ const btn = document.querySelector('#btn');
             let checkboxes = document.querySelectorAll('input[name="electricity"]:checked');
             checkboxes.forEach((checkbox) => {
                 total_electricity_value += parseFloat(checkbox.value);
+                suggestions += '<div>'
+                suggestions += houseElectricity[checkbox.id];
+                suggestions += '</div>'
             });
+            suggestions += '</div>'
             console.log(total_electricity_value);
 
             // POST request using fetch()
@@ -37,7 +44,7 @@ fetch("https://www.carboninterface.com/api/v1/estimates", {
      
     // Adding headers to the request
     headers: {
-        "Authorization": "Bearer w1HQe0eFj5V3cRgMhGELQ",
+        "Authorization": "Bearer vcf8KGKQcvicbMTgMmAsA",
         "Content-Type": "application/json"
     }
 })
@@ -52,6 +59,7 @@ fetch("https://www.carboninterface.com/api/v1/estimates", {
     // Create a variable to store HTML
     let li = `<div><div style=\"font-weight:bold;\">Carbon Footprint</div>`;
     li += `<div>${json.data.attributes.carbon_g} g </div></div>`;
+    li += suggestions
        
     
     
