@@ -90,6 +90,9 @@
             <table id="estimates"></table>
             </div>
 
+        <hr style="border-top: 5px dashed black;">
+
+        <h3 style="padding-bottom: 5px;">Please enter in the vehicle make, model, year, and mileage: </h3>
         <!-- Model Dropdown -->
         <select id="makes" onChange="get_model()">
             <option>Vehicle Make</option>
@@ -104,8 +107,8 @@
           </select>
       <!-- Mileage form and button -->
         <form onsubmit="return false;">
-          <label for="miles">Miles Driven:</label><br>
-          <input type="text" id="miles" name="miles" value="0"><br>
+          <label for="miles" style="font-weight: bold;">Miles Driven:</label><br>
+          <input type="text" id="miles" name="miles" value="0" style="margin-bottom: 10px;"><br>
           <input type="submit" name="Calculate" onclick="get_estimate()">
         </form>
         <div id="output"></div>
