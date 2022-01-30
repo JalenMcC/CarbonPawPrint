@@ -19,8 +19,8 @@ function calc_estimate(id, miles) {
     }).then(response => response.json())
     // Displays the carbon footprint to the webpage
     .then(json => {
-        let out = `<div><div style=\"font-weight:bold;\">Carbon Footprint</div>`;
-        out += `<div>${
+        let out = `<div><div style=\"font-weight:bold; text-align:center; padding-top:5px;\">Carbon Footprint</div>`;
+        out += `<div style=\"text-align:center;\">${
             json.data.attributes.carbon_g
         } g </div></div>`;
         document.getElementById("output").innerHTML = out;
