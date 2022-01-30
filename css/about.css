@@ -1,3 +1,7 @@
+/*--------------------------------------------------*/
+/* Section below works for full size window         */
+/*--------------------------------------------------*/
+
 /* Background */
 body {
     background-color: #89A894;
@@ -42,7 +46,48 @@ ul.navbar-nav {
 
 }
 
-/* Works only when the window size is less than med */
+/* Creater Photos */
+li img {
+    
+  display: block;
+  margin: 50px;
+  width: 300px;
+  height: 300px;
+}
+
+
+ /* Creater Image Captions */
+ li span {
+  display: flex;
+  float: right;
+}
+
+/*Creator Image Titles */
+li h3 {
+  display: flex;
+  float: right;
+  padding: 100px;
+  text-align: right;
+  font: bold 35px helvetica;
+
+}
+
+.Creaters {
+  columns: 1;
+  list-style-type: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/*--------------------------------------------------*/
+/* Section below only works when the window         */
+/* size is less than medium                         */
+/*--------------------------------------------------*/
+
 @media screen and (max-width: 991px) {
   ul {
     width: 50%;
@@ -53,4 +98,46 @@ ul.navbar-nav {
 
   }
   */
+
+  .Creators {
+    columns: 1;
+    list-style-type: none;
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 50px;
+  }
+
+  /* Creater Photos */
+  li img {
+    
+    display: block;
+    width: 300px;
+    height: 300px;
+    background-color:#fd34ac;
+    border-style: inset;
+  }
+
+  li img:hover {
+    border-style: outset;
+  }
+
+  /* Creater Image Captions */
+  li span {
+    display: block;
+    text-align: center;
+  }
+
+  /*Creator Image Titles */
+  li h3 {
+    display: block;
+    text-align: center;
+    font: bold 35px helvetica;
+  }
+
+  .caption {
+    display: block;
+  }
+
 }
