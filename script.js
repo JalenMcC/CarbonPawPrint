@@ -51,7 +51,7 @@ fetch("https://www.carboninterface.com/api/v1/estimates", {
     console.log(json)
     // Create a variable to store HTML
     let li = `<tr><th>Carbon Footprint</th></tr>`;
-    li += `<tr><td>${json.data.attributes.carbon_g} </td></tr>`;
+    li += `<tr><td>${json.data.attributes.carbon_g} g </td></tr>`;
        
     
     
