@@ -1,5 +1,15 @@
 //import Config from "config"
 
+let map;
+
+function initMap() {
+    map = new google.maps.Map(document.getElementById("map"), {
+
+    center: {lat: 34.683, lng: -82.837},
+    zoom: 15,
+    });
+}
+
 //var mykey ="Bearer " + Config.config.MY_KEY;
 let total_electricity_value = 0;
 
